@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Jetbrains Alfred Workflow by bchatard</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/bchatard/jetbrains-alfred-workflow">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Jetbrains Alfred Workflow</h1>
+            <h2>Open project with one of JetBrains&#39; product.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/bchatard/jetbrains-alfred-workflow/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/bchatard/jetbrains-alfred-workflow/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="jetbrains-open-project" class="anchor" href="#jetbrains-open-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JetBrains: Open project</h1>
+
+<p>Alfred2 workflow to easily open your projects with your favorite JetBrains product.</p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>This workflow need one of JetBrains products, and its command line launchers to works:</p>
+
+<p>Example with PhpStorm:</p>
+
+<ol>
+<li>Open PhpStorm</li>
+<li>Go to <em>Tools</em> and <em>Create Command-line Launcher</em>
+<img src="doc/img/requirement/jetbrains-alfred-workflow-create-cli.png" alt="jetbrains-alfred-workflow-create-cli">
+</li>
+<li>In the popup windows, just click on OK
+<img src="doc/img/requirement/jetbrains-alfred-workflow-create-cli-2.png" alt="jetbrains-alfred-workflow-create-cli-2">
+</li>
+</ol>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li>Download workflow from <code>package</code> folder, or <a href="https://github.com/bchatard/jetbrains-alfred-workflow/blob/master/package/JetBrains%20-%20Open%20project.alfredworkflow?raw=true">here</a>
+</li>
+<li>Double click on downloaded file (JetBrains - Open project.alfredworkflow)</li>
+</ol>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h2>
+
+<ul>
+<li>Open Alfred with your usual hotkey</li>
+<li>Type keyword (example <code>pstorm</code>) followed by your project name
+<img src="doc/img/jetbrains-projects-secret-light.png" alt="jetbrains-projects-secret-light">
+</li>
+</ul>
+
+<h3>
+<a id="default-keywords" class="anchor" href="#default-keywords" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Default Keywords</h3>
+
+<ul>
+<li>AppCode: <code>appcode</code> ;</li>
+<li>CLion: <code>clion</code> ;</li>
+<li>IntelliJ Idea: <code>idea</code> ;</li>
+<li>PhpStorm: <code>pstorm</code> ;</li>
+<li>PyCharm: <code>charm</code> ;</li>
+<li>RubyMine: <code>mine</code> ;</li>
+<li>WebStorm: <code>wstorm</code> ;</li>
+</ul>
+
+<h2>
+<a id="supported-versions" class="anchor" href="#supported-versions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Supported versions</h2>
+
+<p>I test with this products/versions:</p>
+
+<ul>
+<li>AppCode: v3.3 ;</li>
+<li>CLion: v1.2 / 2016.x ;</li>
+<li>IntelliJ Idea CE: v15 / 2016.x ;</li>
+<li>PhpStorm: v10 / 2016.x ;</li>
+<li>PyCharm CE: v5 / 2016.x ;</li>
+<li>RubyMine: v8 ;</li>
+<li>WebStorm: v11 / 2016.x ;</li>
+</ul>
+
+<p>NB: about PhpStorm, if you need compatibility with older version please use my old workflow: <a href="https://github.com/bchatard/phpstorm-alfred-workflow">PhpStorm Alfred Workflow</a></p>
+
+<h3>
+<a id="customisation" class="anchor" href="#customisation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customisation</h3>
+
+<p>If you change command line tools name/path or if you want to change keyword, you need to update workflow settings:</p>
+
+<ol>
+<li>Go to Workflows and select "JetBrains - Open project"
+<img src="doc/img/customisation/jetbrains-workflow-script-filter.png" alt="jetbrains-workflow-script-filter">
+</li>
+<li>Double click on a box <em>Run script</em> for a JetBrains product (example: PhpStorm)
+
+<ul>
+<li>Change value in <em>Keyword</em> field</li>
+<li>Change bin value <em>Script</em> field: <code>which YOUR_BIN_NAME</code>
+</li>
+<li>Save
+<img src="doc/img/customisation/jetbrains-workflow-script-edit.png" alt="jetbrains-workflow-script-edit">
+</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="caskroom-users" class="anchor" href="#caskroom-users" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Caskroom Users</h2>
+
+<p>After an application upgrade you need to update the <em>Command-line launcher</em>
+<img src="doc/img/caskroom/jetbrains-alfred-caskroom.png" alt="jetbrains-alfred-caskroom"></p>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Credits</h2>
+
+<p><a href="https://github.com/markokaestner/bash-workflow-handler">Bash Workflow Handler</a></p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/bchatard">bchatard</a> can be found on <a href="https://github.com/bchatard/jetbrains-alfred-workflow">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
